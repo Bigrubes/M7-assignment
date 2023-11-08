@@ -36,7 +36,13 @@ cell4.appendChild(textEmail)
 let textDept = document.createTextNode(department)
 cell5.appendChild(textDept)
     // CREATE THE DELETE BUTTON
+    let deleteBtn = document.createElement('button')
+    deleteBtn.className = 'btn btn-danger btn-sm float-end delete'
+    let textDelete = document.createTextNode('X')
+    deleteBtn.appendChild(textDelete)
+    cell5.appendChild(deleteBtn)
 
+// document.getElementById(table).deleteRow(e.target.cell1.rowIndex)
     // RESET THE FORM
 // form.reset()
     // SET FOCUS BACK TO THE ID TEXT BOX
