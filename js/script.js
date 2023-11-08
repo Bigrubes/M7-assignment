@@ -44,7 +44,7 @@ cell5.appendChild(textDept)
 
 // document.getElementById(table).deleteRow(e.target.cell1.rowIndex)
     // RESET THE FORM
-// form.reset()
+form.reset()
     // SET FOCUS BACK TO THE ID TEXT BOX
 
     // INCREMENENT THE NUMBER OF EMPLOYEES IN THE TABLE
@@ -52,3 +52,9 @@ cell5.appendChild(textDept)
 })
 
 // DELETE EMPLOYEE
+table.addEventListener('click', (e) => {
+e.preventDefault()
+if (confirm('Are you sure you want to delete this employee?')){
+   table.deleteRow(e.target.closest('tr').rowIndex)
+}
+})
