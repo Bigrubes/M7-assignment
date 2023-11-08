@@ -1,6 +1,7 @@
 // GET ADD EMPLOYEE FORM AND EMPLOYEE TABLE FROM THE DOM
 let form = document.querySelector('form')
 let table = document.querySelector('table')
+// let count = document.querySelector('output').value = 0
 // SET A COUNT VARIABLE TO DISPLAY NEXT TO EMPLOYEES HEADER
 
 
@@ -46,8 +47,13 @@ cell5.appendChild(textDept)
     // RESET THE FORM
 form.reset()
     // SET FOCUS BACK TO THE ID TEXT BOX
-    document.getElementById('id').focus()
+document.getElementById('id').focus()
     // INCREMENENT THE NUMBER OF EMPLOYEES IN THE TABLE
+let count = document.querySelector('output')
+let increment = count.innerHTML
+++increment
+console.log(increment)
+document.querySelector('output').innerHTML = increment
 
 })
 
@@ -57,4 +63,11 @@ e.preventDefault()
 if (confirm('Are you sure you want to delete this employee?')){
    table.deleteRow(e.target.closest('tr').rowIndex)
 }
+console.log('pressed delete button')
+x=0
+let count = document.querySelector('output')
+let decrement = count.innerHTML
+--decrement
+console.log(decrement)
+document.querySelector('output').innerHTML = decrement
 })
