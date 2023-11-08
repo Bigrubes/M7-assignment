@@ -1,10 +1,8 @@
 // GET ADD EMPLOYEE FORM AND EMPLOYEE TABLE FROM THE DOM
 let form = document.querySelector('form')
 let table = document.querySelector('table')
-// let count = document.querySelector('output').value = 0
 // SET A COUNT VARIABLE TO DISPLAY NEXT TO EMPLOYEES HEADER
-
-
+let count = document.querySelector('output').value = 0
 // ADD EMPLOYEE
 form.addEventListener('submit', (e) => {
     // PREVENT FORM SUBMISSION
@@ -42,8 +40,6 @@ cell5.appendChild(textDept)
     let textDelete = document.createTextNode('X')
     deleteBtn.appendChild(textDelete)
     cell5.appendChild(deleteBtn)
-
-// document.getElementById(table).deleteRow(e.target.cell1.rowIndex)
     // RESET THE FORM
 form.reset()
     // SET FOCUS BACK TO THE ID TEXT BOX
@@ -52,22 +48,16 @@ document.getElementById('id').focus()
 let count = document.querySelector('output')
 let increment = count.innerHTML
 ++increment
-console.log(increment)
 document.querySelector('output').innerHTML = increment
-
 })
-
 // DELETE EMPLOYEE
 table.addEventListener('click', (e) => {
 e.preventDefault()
 if (confirm('Are you sure you want to delete this employee?')){
    table.deleteRow(e.target.closest('tr').rowIndex)
 }
-console.log('pressed delete button')
-x=0
 let count = document.querySelector('output')
 let decrement = count.innerHTML
 --decrement
-console.log(decrement)
 document.querySelector('output').innerHTML = decrement
 })
